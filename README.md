@@ -29,6 +29,7 @@ After collecting mentioned files, all you need to do is run the command
 
 ## Question:
 **Question_01**: Some steps in this procedure are run manually (via command line) --> do I need to make them run automatically?
+
 **Question_02**: I have to run the code to verify all the results or just need to randomly check?
 
 
