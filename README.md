@@ -8,6 +8,8 @@ In order to build an Emu custom database, we need 4 following files:
 
 After collecting mentioned files, all you need to do is run the command
 
+```conda activate emu``` **[Emu installation](https://gitlab.com/treangenlab/emu/-/tree/master)**
+
 ```emu build-database zymo_assembled_db --names names.dmp --nodes nodes.dmp --sequences fasta --seq2tax seq2tax.map --threads 64```
 
 ## But, how to collect 4 aforementioned files?:
