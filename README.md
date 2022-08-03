@@ -7,7 +7,7 @@ In order to build an Emu custom database, we need 4 following files:
 
 After collecting mentioned files, all you need to do is run the command
 
-'''emu build-database zymo_assembled_db --names names.dmp --nodes nodes.dmp --sequences fasta --seq2tax seq2tax.map --threads 64'''
+```emu build-database zymo_assembled_db --names names.dmp --nodes nodes.dmp --sequences fasta --seq2tax seq2tax.map --threads 64```
 
 
 
