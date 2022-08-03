@@ -16,7 +16,7 @@ After collecting mentioned files, all you need to do is run the command
 3. seq2tax: a tab delimiter tabular format contains the header (similar to the fasta file) and a taxid
 
 ## Problems - solution:
-**Problem_01**: Some Ids can not be found in the nodes.dmp
+**Problem_01**: Six IDs (1670641, 419596, 335819, 143813, 2213057, 93930) can not be found in the nodes.dmp
 **Solution_01**: I removed them in both fasta and seq2tax.map files --> is it ok?, do the removed id make any sense?
 
 **Problem_02**: Original fasta files include several spaces in the header, therefore, it did not work without editing
