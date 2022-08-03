@@ -21,8 +21,8 @@ After collecting mentioned files, all you need to do is run the command
 
 **Problem_02**: Original fasta files include several spaces in the header, therefore, it did not work without editing
 **Solution_02**: I write a python code to perform:
-[^2.1]:  Replace spaces by ```~``` sign, I've already used ```grep``` command to verify there is no ```~``` sign in the original fasta file
-[^2.2]:  Export the seq2tax files corresponding to fasta files
+1. Replace spaces by ```~``` sign, I've already used ```grep``` command to verify there is no ```~``` sign in the original fasta file
+2. Export the seq2tax files corresponding to fasta files
 
 **Problem_03**: The error *"EOFError: Ran out of input"* when execute the ```emu build-database``` command appears to be a memory bug, potentially involving the library pandaralle.
 **Solution_03**: The author recommended to split data into smaller pieces. I have breaked them into total 18 fasta files, corresponding to 18 seq2tax.map files. 
