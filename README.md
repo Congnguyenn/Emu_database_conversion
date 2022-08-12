@@ -19,9 +19,11 @@ After collecting mentioned files, all you need to do is run the command
 
 ## Problems - solution:
 **Problem_03**: The error *"EOFError: Ran out of input"* when execute the ```emu build-database``` command appears to be a memory bug, potentially involving the library pandaralle.
-**Cause: This problem can be caused by 2 reasons
+
+**Causes: This problem can be caused by 2 reasons
   - Memory limitation: when running a big file
-  - Sequence: Because of some unknown reasons, some sequences can not be executed, therefore the small file (breaked from the original file) can not be execute too. 
+  - Sequence: Because of some unknown reasons, some sequences can not be executed, therefore the small file (breaked from the original file) can not be execute too.
+
 **Solution_03**: To solve 2 mentioned problems, I performed:
   - Breaking file into smaller pieces
   - Iterative approach: that means breaking file into different sizes (10000, 1000, 50, 2 lines in a file) and execute it in the different rounds. The final round only contains 2 lines (means one sequence), so the sequences which can not be run could be identified. This solution also alows to maximize the size of data and re-useable
