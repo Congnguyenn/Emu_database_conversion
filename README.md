@@ -18,24 +18,24 @@ After collecting mentioned files, all you need to do is run the command
 3. seq2tax: a tab delimiter tabular format contains the header (similar to the fasta file) and a taxid
 
 ## Problems - solution:
-**Problem_01**: Six IDs (1670641, 419596, 335819, 143813, 2213057, 93930) can not be found in the nodes.dmp
-**Solution_01**: I removed them in both fasta and seq2tax.map files --> is it ok?, do the removed id make any sense?
-
-**Problem_02**: Original fasta files include several spaces in the header, therefore, it did not work without editing
-**Solution_02**: I write a python code to perform:
-1. Replace spaces by ```~``` sign, I've already used ```grep``` command to verify there is no ```~``` sign in the original fasta file
-2. Export the seq2tax.map files corresponding to fasta files
-
 **Problem_03**: The error *"EOFError: Ran out of input"* when execute the ```emu build-database``` command appears to be a memory bug, potentially involving the library pandaralle.
-**Solution_03**: The author recommended to split data into smaller pieces. I have breaked them into total 18 fasta files, corresponding to 18 seq2tax.map files. 
+**Cause: This problem can be caused by 2 reasons
+  - Memory limitation: when running a big file
+  - Sequence: Because of some unknown reasons, some sequences can not be executed, therefore the small file (breaked from the original file) can not be execute too. 
+**Solution_03**: To solve 2 mentioned problems, I performed:
+  - Breaking file into smaller pieces
+  - Iterative approach: that means breaking file into different sizes (10000, 1000, 50, 2 lines in a file) and execute it in the different rounds. The final round only contains 2 lines (means one sequence), so the sequences which can not be run could be identified. This solution also alows to maximize the size of data and re-useable
 
-## Question:
-**Question_01**: Some steps in this procedure are run manually (via command line) --> do I need to make them run automatically?
-
-**Question_02**: I have to run the code to verify all the results or just need to randomly check?
-
-
-
+## The meaning of files and folders in this repository:
+  - U16S.KTEST_format: Working directory
+  - U16S.KTEST_format.fa: your input fasta file
+  - nodes.dmp and names.dmp: Downloaded from the above link
+  - after_round4.fa: Contains the sequences which can not be execute even individually
+  - emu_converter.py: The python script to build the database
+  - emu_build_database.sh: The bash script contains the command to run the ```emu build-database```, above python script will call this bash script automatically
+  - RESULT_FASTA_corrected.fasta and RESULT_TAXONOMY_corrected.tsv: fasta and tsv files contain the sequence and taxonomy information, this is the expectated result.
+  
+ 
 
 
 
