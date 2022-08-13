@@ -31,6 +31,6 @@ After collecting mentioned files, all you need to do is run the command.
 ## The meaning of files and folders in this repository:
   - **U16S.KTEST_format.tar.xz**: Working directory zipped.
   - **after_round3.fa**: Contains the sequences which can not be execute even individually.
-  - **U16S.KTEST_format/RESULT_FASTA_corrected.fasta** and **U16S.KTEST_format/RESULT_TAXONOMY_corrected.tsv**: fasta and tsv files contain the sequence and taxonomy information, this is the expectated result.
+  - **U16S.KTEST_format/RESULT_FASTA_corrected.fasta** and **U16S.KTEST_format/RESULT_TAXONOMY_corrected.tsv**: fasta and tsv files contain the sequence and taxonomy information, these are the expected result.
   - **emu_converter.py**: The python script to build the database.
   - **emu_build_database.sh**: The bash script contains the command to run the ```emu build-database```, above python script will call this bash script automatically.
