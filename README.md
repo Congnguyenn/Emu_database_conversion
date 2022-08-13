@@ -32,7 +32,7 @@ After collecting mentioned files, all you need to do is run the command.
   - **U16S.KTEST_format**: Working directory.
   - **U16S.KTEST_format.fa**: your input fasta file.
   - **nodes.dmp** and **names.dmp**: Downloaded from the above link.
-  - **after_round4.fa**: Contains the sequences which can not be execute even individually.
+  - **after_round3.fa**: Contains the sequences which can not be execute even individually.
   - **emu_converter.py**: The python script to build the database.
   - **emu_build_database.sh**: The bash script contains the command to run the ```emu build-database```, above python script will call this bash script automatically.
   - **RESULT_FASTA_corrected.fasta** and **RESULT_TAXONOMY_corrected.tsv**: fasta and tsv files contain the sequence and taxonomy information, this is the expectated result.
